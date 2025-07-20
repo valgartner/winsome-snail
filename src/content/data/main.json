@@ -1,13 +1,9 @@
 {
   "product": {
-    "name": "Plumbus",
-    "tagline": "Everybody Has One. Nobody Knows Why.",
+    "name": "Set sail, winsome snail!",
+    "tagline": "Go wherever your heart guides you.",
     "heroImage": "/images/plumbus-hero.jpg",
-    "video": {
-      "title": "How They Do It: Plumbus Edition",
-      "url": "https://www.youtube.com/watch?v=eMJk4y9NGvE"
-    },
-    "description": "A Plumbus is your one-stop solution for everything you didn't know you needed. From reheating existential dread to polishing your Schlammy, Plumbus does it all — usually without asking why.",
+    "description": "The world is vast, and you have all the time in the world to explore.",
     "features": [
       {
         "title": "Organic Yet Alarmingly Slippery",
@@ -35,7 +31,7 @@
       }
     ],
     "callToAction": {
-      "text": "Buy One Before It Buys You!",
+      "text": "Be Free!",
       "url": "/shop/plumbus"
     },
     "testimonials": [
