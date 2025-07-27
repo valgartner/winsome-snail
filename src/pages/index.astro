@@ -25,11 +25,7 @@ const hdImages = {
 <html lang="en">
 	<head>
 		<BaseHead title={seo.title} description={seo.description} />
-		<style define:vars={{
-			portalBg1: `url(${hdImages.portal1})`,
-			portalBg2: `url(${hdImages.portal2})`,
-			textureBg: `url(${hdImages.texture})`
-		}}>
+		<style>
 			:root {
 				--primary: #2a623d;
 				--primary-dark: #1a472a;
@@ -62,30 +58,6 @@ const hdImages = {
 				padding: 0 2rem;
 			}
 
-			.portal-bg {
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: 
-					radial-gradient(circle at 10% 20%, rgba(42, 98, 61, 0.4) 0%, transparent 50%),
-					radial-gradient(circle at 90% 80%, rgba(151, 206, 76, 0.2) 0%, transparent 50%),
-					var(--background);
-				z-index: -1;
-				&::before {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background: var(--textureBg) center/cover;
-					opacity: 0.05;
-					mix-blend-mode: overlay;
-				}
-			}
-
 			.hero {
 				min-height: 100vh;
 				display: flex;
@@ -96,36 +68,8 @@ const hdImages = {
 				padding: 0;
 				overflow: hidden;
 				width: 100%;
-				&::before {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					background: var(--portalBg1) center/cover;
-					opacity: 0.1;
-					mix-blend-mode: overlay;
-					animation: portalPulse 15s ease-in-out infinite;
-				}
-				&::after {
-					content: '';
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					background: var(--portalBg2) center/cover;
-					opacity: 0.1;
-					mix-blend-mode: color-dodge;
-					animation: portalPulse 20s ease-in-out infinite reverse;
-				}
 			}
 
-			@keyframes portalPulse {
-				0%, 100% { opacity: 0.1; transform: scale(1); }
-				50% { opacity: 0.15; transform: scale(1.1); }
-			}
 
 			.hero-content {
 				width: 100%;
@@ -138,7 +82,6 @@ const hdImages = {
 				text-align: left;
 				position: relative;
 				z-index: 2;
-				backdrop-filter: blur(10px);
 				background: rgba(13, 31, 19, 0.3);
 				border-top: 1px solid rgba(151, 206, 76, 0.1);
 				border-bottom: 1px solid rgba(151, 206, 76, 0.1);
@@ -160,13 +103,7 @@ const hdImages = {
 					bottom: -20px;
 					background: radial-gradient(circle at center, var(--glow) 0%, transparent 70%);
 					z-index: -1;
-					animation: glowPulse 4s ease-in-out infinite;
 				}
-			}
-
-			@keyframes glowPulse {
-				0%, 100% { transform: scale(1); opacity: 0.5; }
-				50% { transform: scale(1.1); opacity: 0.8; }
 			}
 
 			.hero-image img {
@@ -198,14 +135,8 @@ const hdImages = {
 					0 0 10px var(--glow),
 					0 0 20px var(--glow),
 					0 0 40px var(--glow);
-				animation: pulse 4s ease-in-out infinite;
 				letter-spacing: -2px;
 				line-height: 0.9;
-			}
-
-			@keyframes pulse {
-				0%, 100% { text-shadow: 0 0 10px var(--glow), 0 0 20px var(--glow), 0 0 40px var(--glow); }
-				50% { text-shadow: 0 0 20px var(--glow), 0 0 40px var(--glow), 0 0 60px var(--glow); }
 			}
 
 			.hero p {
@@ -234,7 +165,6 @@ const hdImages = {
 				box-shadow: 
 					0 0 10px var(--glow),
 					0 0 20px var(--glow);
-				backdrop-filter: blur(5px);
 			}
 
 			.cta-button:hover {
@@ -298,7 +228,6 @@ const hdImages = {
 				padding: 2rem;
 				border-radius: 20px;
 				transition: all 0.3s ease;
-				backdrop-filter: blur(10px);
 				border: 1px solid rgba(151, 206, 76, 0.2);
 				position: relative;
 				overflow: hidden;
@@ -373,7 +302,6 @@ const hdImages = {
 				background: rgba(42, 98, 61, 0.3);
 				padding: 2rem;
 				border-radius: 20px;
-				backdrop-filter: blur(10px);
 				border: 1px solid rgba(151, 206, 76, 0.1);
 				font-style: italic;
 				position: relative;
@@ -443,7 +371,6 @@ const hdImages = {
 				padding: 2rem;
 				background: rgba(26, 71, 42, 0.5);
 				border-radius: 15px;
-				backdrop-filter: blur(5px);
 				border: 1px solid rgba(151, 206, 76, 0.1);
 				transition: transform 0.3s ease;
 				height: 100%;
@@ -500,7 +427,6 @@ const hdImages = {
 				background: rgba(26, 71, 42, 0.3);
 				border-radius: 20px;
 				overflow: hidden;
-				backdrop-filter: blur(10px);
 				border: 1px solid rgba(151, 206, 76, 0.1);
 				transition: all 0.3s ease;
 				height: 100%;
@@ -576,7 +502,6 @@ const hdImages = {
 				padding: 0.5rem 1rem;
 				border: 1px solid rgba(151, 206, 76, 0.3);
 				border-radius: 5px;
-				backdrop-filter: blur(5px);
 			}
 
 			.social-links a:hover {
@@ -593,7 +518,6 @@ const hdImages = {
 				padding: 2rem;
 				background: rgba(26, 71, 42, 0.3);
 				border-radius: 10px;
-				backdrop-filter: blur(5px);
 			}
 
 			@media (max-width: 1024px) {
@@ -681,7 +605,6 @@ const hdImages = {
 		</style>
 	</head>
 	<body>
-		<div class="portal-bg"></div>
 		<main>
 			<section class="hero">
 				<div class="hero-content">
