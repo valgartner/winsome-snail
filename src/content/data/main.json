@@ -1,13 +1,12 @@
 {
   "product": {
-    "name": "Winsome Snail",
+    "name": "Set Sail, Winsome Snail!",
     "tagline": "Coming Soon",
     "heroImage": "/main-winsome-snail-1.jpg",
-    "description": "Stay tuned for something wonderful.",
+    "description": "Stay tuned!",
     "footer": {
-      "legalDisclaimer": "More information coming soon.",
       "socialLinks": [],
-      "contactEmail": "hello@example.com"
+      "contactEmail": "snail@snail.com"
     }
   },
   "seo": {
@@ -19,7 +18,7 @@
     ],
     "author": "Winsome Snail",
     "canonical": "",
-    "robots": "index, follow",
+    "robots": "noindex, nofollow",
     "language": "en-US"
   }
 }
